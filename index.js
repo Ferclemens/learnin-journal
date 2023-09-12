@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     data.map((post, index) => {
         if(index === 0){
             hero += `
-                <div class="hero">
+                <div class="hero" id=${index}>
                     <img src=${post.urlImage} class="hero-img">
                     <div class="hero-description">
                         <p class="hero-date">${post.date}</p>
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `
         } else {
             posts += `
-                <div class="post-description">
+                <div class="post-description" id=${index}>
                     <img class="post-img" src=${post.urlImage}>
                     <p>${post.date}</p>
                     <h1>${post.title}</h1>
@@ -37,4 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     postEl.innerHTML = posts
 })
 
-
+function ReadPost(postID) {
+    let postToRead = data.find((post, index) => post[index] === postID)
+    console.log(postToRead);
+}
