@@ -61,7 +61,7 @@ nav a {
 
 /*///////////////////POSTS//////////////////////////*/
 .post {
-    padding: 20px;
+    padding: 0 20px;
 }
 .post p, h1 {
     margin: 9px 0;
@@ -75,15 +75,25 @@ nav a {
 .post-description {
     margin: 40px 0;
 }
+.hidden {
+    visibility: hidden;
+}
+.visible {
+    visibility: visible;
+}
 
 /*///////////////////MORE//////////////////////////*/
 .view-more {
     font-weight: bold;
-    display: block;
     color: #202020;
-    padding-top: 1rem;
-    padding-bottom: 2.5rem;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    background-color: transparent;
+    border: none;
+}
+.view-more span {
+    border-bottom: 1px solid black;
 }
 
 /*///////////////////FOOTER//////////////////////////*/
