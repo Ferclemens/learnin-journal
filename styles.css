@@ -53,7 +53,7 @@ nav a {
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     color: #FFFFFF;
     font-size: 1rem;
     width: 90%;
@@ -87,6 +87,9 @@ nav a {
 .selected-post-description img {
     margin: 30px 0;
 
+}
+.selected-post-description p {
+    font-weight: 400;
 }
 /*///////////////////MORE//////////////////////////*/
 .view-more {
