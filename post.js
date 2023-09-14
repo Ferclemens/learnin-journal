@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if(selectedPost){
         postToRender = `
             <div class="selected-post-description" id=${selectedPost.index}>
-                <p>${selectedPost.date}</p>
+                <p class="post-date">${selectedPost.date}</p>
                 <h1>${selectedPost.title}</h1>
                 <p>${selectedPost.paragraph}</p>
                 <img class="post-img" src=${selectedPost.urlImage}>
@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>${selectedPost.description.paragraph1}</p>
                 <h4>${selectedPost.description.title2}</4>
                 <p>${selectedPost.description.paragraph2}</p>
+            </div>
         `
     } else {
         postToRender = `
@@ -39,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             posts += `
                 <div class="post-description" id=${post.index} onclick="leerPost(${post.index})">
                     <img class="post-img" src=${post.urlImage}>
-                    <p>${post.date}</p>
+                    <p class="post-date">${post.date}</p>
                     <h1>${post.title}</h1>
                     <p>${post.paragraph}</p>
                 </div>

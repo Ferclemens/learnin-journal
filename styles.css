@@ -63,6 +63,9 @@ nav a {
 .post {
     padding: 0 20px;
 }
+.post-date {
+    font-size: 0.75rem;
+}
 .post p, h1 {
     margin: 9px 0;
 }

@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="hero" id="${post.index}" onclick="leerPost(${post.index})">
                     <img src=${post.urlImage} class="hero-img">
                     <div class="hero-description">
-                        <p class="hero-date">${post.date}</p>
+                        <p class="post-date">${post.date}</p>
                         <h1>${post.title}</h1>
                         <p>${post.paragraph}</p>
                     </div>
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             posts += `
                 <div class="post-description" id=${post.index} onclick="leerPost(${post.index})">
                     <img class="post-img" src=${post.urlImage}>
-                    <p>${post.date}</p>
+                    <p class="post-date">${post.date}</p>
                     <h1>${post.title}</h1>
                     <p>${post.paragraph}</p>
                 </div>
@@ -54,7 +54,7 @@ function showMore(){
             morePosts += `
                 <div class="post-description" id=${post.index} onclick="leerPost(${post.index})">
                     <img class="post-img" src=${post.urlImage}>
-                    <p>${post.date}</p>
+                    <p class="post-date">${post.date}</p>
                     <h1>${post.title}</h1>
                     <p>${post.paragraph}</p>
                 </div>

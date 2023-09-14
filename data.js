@@ -23,7 +23,7 @@ let dataPosts = [
     {
         index: 1,
         urlImage: "./assets/imgpost1.png",
-        date: "July 23, 2022",
+        date: "September 02, 2022",
         title: "Blog one",
         paragraph: "I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.",
         description: {
@@ -44,7 +44,7 @@ let dataPosts = [
     {
         index: 2,
         urlImage: "./assets/imgpost2.png",
-        date: "July 233, 2022",
+        date: "December 16, 2022",
         title: "Blog two",
         paragraph: "I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.",
         description: {
@@ -65,7 +65,7 @@ let dataPosts = [
     {
         index: 3,
         urlImage: "./assets/imgpost3.png",
-        date: "July 2333, 2022",
+        date: "March 01, 2023",
         title: "Blog three",
         paragraph: "I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.",
         description: {
@@ -86,7 +86,7 @@ let dataPosts = [
     {
         index: 4,
         urlImage: "./assets/imgpost4.png",
-        date: "September 01, 2023",
+        date: "July 01, 2023",
         title: "Blog four",
         paragraph: "I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.",
         description: {
