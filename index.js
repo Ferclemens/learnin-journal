@@ -11,9 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let hero = ''
     let posts = ''
     data.map((post) => {
+        //post principal (HERO)
         if(post.index === 0){
             hero += `
-                <div class="hero" id=${post.index}>
+                <div class="hero" data-id="${post.index}">
                     <img src=${post.urlImage} class="hero-img">
                     <div class="hero-description">
                         <p class="hero-date">${post.date}</p>
@@ -23,16 +24,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `
         } 
+        // 3 posts activos
         else if (post.index > 0 && post.index <= 3) {
             posts += `
-                <div class="post-description" id=${post.index}>
+                <div class="post-description" id=${post.index} onclick="leerPost(${post.index})">
                     <img class="post-img" src=${post.urlImage}>
                     <p>${post.date}</p>
                     <h1>${post.title}</h1>
                     <p>${post.paragraph}</p>
                 </div>
             `
-            }
+        }
     })
     //console.log(hero);
     //console.log(posts);
@@ -40,11 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
     postEl.innerHTML = posts
 })
 
-//renderizamos mas posts
+//renderizamos 3 posts más
 viewMoreEl.addEventListener('click', function(){
     showMore()
 })
-
+//mostramos mas posts al hacer click en "view more"
 function showMore(){
     let morePosts = ''
     data.map((post) => {
@@ -61,7 +63,5 @@ function showMore(){
         morePostsEl.innerHTML = morePosts
     })
 }
-function ReadPost(postID) {
-    let postToRead = data.find((post, index) => post[index] === postID)
-    console.log(postToRead);
-}
+
+
