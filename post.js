@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     data.map((post) => {
         if(post.index != selectedPost.index && post.index <= 3) {
             posts += `
-                <div class="post-description" id=${post.index}>
+                <div class="post-description" id=${post.index} onclick="leerPost(${post.index})">
                     <img class="post-img" src=${post.urlImage}>
                     <p>${post.date}</p>
                     <h1>${post.title}</h1>

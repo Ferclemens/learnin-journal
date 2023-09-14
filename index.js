@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //post principal (HERO)
         if(post.index === 0){
             hero += `
-                <div class="hero" data-id="${post.index}">
+                <div class="hero" id="${post.index}" onclick="leerPost(${post.index})">
                     <img src=${post.urlImage} class="hero-img">
                     <div class="hero-description">
                         <p class="hero-date">${post.date}</p>
@@ -52,7 +52,7 @@ function showMore(){
     data.map((post) => {
         if(post.index > 3) {
             morePosts += `
-                <div class="post-description" id=${post.index}>
+                <div class="post-description" id=${post.index} onclick="leerPost(${post.index})">
                     <img class="post-img" src=${post.urlImage}>
                     <p>${post.date}</p>
                     <h1>${post.title}</h1>
