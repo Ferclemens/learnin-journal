@@ -1,9 +1,12 @@
 import data from './data.js'
 
 const heroEl = document.getElementById('hero')
+const bodyEl = document.getElementById('body')
 const postEl = document.getElementById('posts')
 const morePostsEl = document.getElementById('morePosts')
 const viewMoreEl = document.getElementById('showMore')
+
+/////////////////////////////LISTENERS///////////////////////////
 
 //renderizamos en el front los posts recibidos
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="hero" id="${post.index}" onclick="leerPost(${post.index})">
                     <img src=${post.urlImage} class="hero-img">
                     <div class="hero-description">
-                        <p class="post-date">${post.date}</p>
+                        <p class="hero-date">${post.date}</p>
                         <h1>${post.title}</h1>
-                        <p>${post.paragraph}</p>
+                        <p class="hero-info">${post.paragraph}</p>
                     </div>
                 </div>
             `
@@ -31,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img class="post-img" src=${post.urlImage}>
                     <p class="post-date">${post.date}</p>
                     <h1>${post.title}</h1>
-                    <p>${post.paragraph}</p>
+                    <p class="post-info" >${post.paragraph}</p>
                 </div>
             `
         }
@@ -46,6 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
 viewMoreEl.addEventListener('click', function(){
     showMore()
 })
+
+bodyEl.addEventListener('resize', applyGridSistem())
+
+/////////////////////////////FUNCTIONS///////////////////////////
+
 //mostramos mas posts al hacer click en "view more"
 function showMore(){
     let morePosts = ''
@@ -62,6 +70,17 @@ function showMore(){
         }
         morePostsEl.innerHTML = morePosts
     })
+}
+function applyGridSistem() {
+    let size = window.innerWidth
+    console.log(size);
+    if(window.innerWidth > 650) {
+        postEl.classList.add('grid')
+        morePostsEl.classList.add('grid')
+    } else {
+        postEl.classList.remove('grid')
+        morePostsEl.classList.remove('grid')
+    }
 }
 
 
