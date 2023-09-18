@@ -98,6 +98,10 @@ nav a {
 .selected-post-description img {
     margin: 30px 0;
     width: 100%;
+    height: 232px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 3px;
 
 }
 .selected-post-description p {
@@ -146,6 +150,7 @@ footer p {
 }
 .about-description p {
     font-size: 1rem;
+    line-height: 20px;
 }
 .avatar-img {
     width: 185px;
