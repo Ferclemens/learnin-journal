@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if(selectedPost){
         postToRender = `
             <div class="selected-post-description" id=${selectedPost.index}>
-                <p class="post-date">${selectedPost.date}</p>
+                <p class="selected-date">${selectedPost.date}</p>
                 <h1>${selectedPost.title}</h1>
                 <p>${selectedPost.paragraph}</p>
                 <img src=${selectedPost.urlImage}>
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img class="post-img" src=${post.urlImage}>
                     <p class="post-date">${post.date}</p>
                     <h1>${post.title}</h1>
-                    <p>${post.paragraph}</p>
+                    <p class="post-info">${post.paragraph}</p>
                 </div>
             `
         }

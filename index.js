@@ -64,7 +64,7 @@ function showMore(){
                     <img class="post-img" src=${post.urlImage}>
                     <p class="post-date">${post.date}</p>
                     <h1>${post.title}</h1>
-                    <p>${post.paragraph}</p>
+                    <p class="post-info">${post.paragraph}</p>
                 </div>
             `
         }

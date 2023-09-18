@@ -1,6 +1,7 @@
 import data from './data.js'
 
 const recentsEl = document.getElementById('recents')
+const bodyEl = document.getElementById('body')
 
 //renderizamos en el front los posts recientes
 document.addEventListener('DOMContentLoaded', () => {
@@ -13,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <img class="post-img" src=${post.urlImage}>
                         <p class="post-date">${post.date}</p>
                         <h1>${post.title}</h1>
-                        <p>${post.paragraph}</p>
+                        <p class="post-info">${post.paragraph}</p>
                     </div>
                 `
             }
@@ -22,3 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
     //console.log(posts);
     recentsEl.innerHTML = posts
 })
+
+bodyEl.addEventListener('resize', applyGridSistem())
+
+function applyGridSistem() {
+    let size = window.innerWidth
+    console.log(size);
+    if(window.innerWidth > 650) {
+        recentsEl.classList.add('grid')
+    } else {
+        recentsEl.classList.remove('grid')
+    }
+}
